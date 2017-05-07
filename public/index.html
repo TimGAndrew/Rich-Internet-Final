@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TorChan</title>
+	<link rel="icon" type="image/png" href="img/TOR.ico">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+</head>
+<body>
+    <div id="loader"></div>
+
+	<!-- Delete Modal Dialog -->
+	<div class="modal fade" id="deletePrompt">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>This operation cannot be undone, are you sure you want to continue?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="delete-button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 mt-5 mb-5">
+				<div class="float-left">
+					<img class="float-left" src="img/TOR.png" />
+					<h1 id="title" class="float-left">Chan</h1>
+				</div>
+				<div class="float-right">
+					<button id="add-post" class="btn btn-link"><i class="material-icons" id="add-post">add_circle</i></button>
+				</div>
+			</div>
+		</div>
+		<div id="new-post-form" class="row" style="display: none;">
+			<div class="col-lg-8 offset-lg-2">
+				<div class="card mb-4">
+					<div class="card-block">
+						<div class="form">
+							<div id="newPostTitle" class="form-group">
+								<label for="new-title" class="form-control-label">Title</label>
+								<input type="text" id="new-title" class="form-control"/>
+								<div id="new-title-help" class="form-control-feedback"></div>
+							</div>
+							<div id="newPostBody" class="form-group">
+								<label for="new-body" class="form-control-label">Body</label>
+								<textarea id="new-body" class="form-control post-body"></textarea>
+								<div id="new-body-help" class="form-control-feedback"></div>
+							</div>
+							<div class="form-group">
+								<div class="float-right">
+									<button id="post-new-post" class="btn btn-link"><i class="material-icons">check</i></button>
+									<button id="cancel-new-post" class="btn btn-link"><i class="material-icons">close</i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mb-6">
+			<div class="col-lg-8 offset-lg-2 mt-2">
+				<div id="posts">
+					<!--Content will automatically populate here.-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+	integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="js/dateformat.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

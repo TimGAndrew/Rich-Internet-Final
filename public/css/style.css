@@ -1,0 +1,73 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h5.card-title {
+	font-weight: 600;
+	font-size: 1.0rem;
+}
+
+.card-header {
+    padding: 1.0rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #FFF;
+	border: none;
+}
+
+div.card-header.add-border {
+	border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+#title {
+	position: absolute;
+	left:110px;
+	bottom:-10px;
+}
+
+#posts {
+	display: block;
+	position: relative;
+}
+
+.expanded {
+	display:block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 400px;
+}
+
+.reply {
+	margin-bottom: 12px;
+}
+/*
+
+[contenteditable="true"]
+{
+    outline-color: #4D90FE;
+    outline-width: 5px;
+    outline-style: auto;
+}
+*/
+
+h5#post-title
+{
+    cursor: pointer;
+}
+
+#post-body {
+
+}
+
+#reply-box {
+	display: block;
+	height: 160px;
+}
+
+.divider {
+	display: block;
+	height: 1px;
+	background: rgba(0,0,0,0.10);
+	margin-bottom: : 1px solid rgba(0,0,0,0.10);
+}

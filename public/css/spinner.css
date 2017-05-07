@@ -1,0 +1,33 @@
+/*CSS Spinner from W3 Schools - http://www.w3schools.com/howto/howto_css_loader.asp*/
+
+#results-title, #results-content {
+    display: none;
+}
+
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid rgba(230,230,230,0.5);
+  border-radius: 50%;
+  border-top: 16px solid rgba(2,117,216,1);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+  z-index: 100;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
